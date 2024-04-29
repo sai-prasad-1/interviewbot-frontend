@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import axios from 'axios';
 import { API_BASE_URL } from '@/utils/config';
+import { useRouter } from 'next/navigation';
 
 export default function CreateInterview() {
   const [jobRole, setJobRole] = useState('');
@@ -15,10 +16,11 @@ export default function CreateInterview() {
   const [additionalInstructions, setAdditionalInstructions] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
+  const router = useRouter();
   
   const handleSubmit = async (e:any) => {
-      const userID = localStorage.getItem('userID');
+
+      const userID = localStorage.getItem('userId');
     e.preventDefault();
     setLoading(true);
     setError('');
@@ -29,18 +31,21 @@ export default function CreateInterview() {
         role : jobRole,
         count : numberOfQuestions,
         level : jobLevel,
-        userId : userID,
+        userId : parseInt(userID!),
         additionalInstructions,
       });
 
       if (!response.data.success) {
         throw new Error(response.data.message || 'Failed to create interview');
       }
+      console.log(response.data);
+      router.push('/interviews');
 
       // If interview creation is successful, perform any necessary action
       // For example, you can redirect the user to another page
     } catch (error :any) {
       setError(error.response?.data?.message || 'Failed to create interview. Please try again.');
+      console.log(error);
     } finally {
       setLoading(false);
     }
