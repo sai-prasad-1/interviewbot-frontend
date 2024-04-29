@@ -1,45 +1,45 @@
 
 import Link from "next/link"
 
-export default function LandingPage() {
+export function LandingPage() {
   return (
     <>
       <header className="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link className="flex items-center" href="#">
           <BotIcon className="h-6 w-6 mr-2" />
-          <span className="font-bold text-lg">HireWise</span>
+          <span className="font-bold text-lg">Interview Bot</span>
         </Link>
         <div className="flex items-center space-x-4">
           <Link
-            className="text-sm font-medium text-gray-600 hover:text-gray-900"
-            href="/auth/login"
+            className="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
+            href="#"
           >
             Login
           </Link>
           <Link
-            className="inline-flex items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-            href="/auth/register"
+            className="inline-flex items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-200 dark:focus:ring-gray-600 dark:focus:ring-offset-gray-950"
+            href="#"
           >
             Sign Up
           </Link>
         </div>
       </header>
       <main>
-        <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
+        <section className="bg-gray-50 py-12 sm:py-16 lg:py-20 dark:bg-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
               <div>
-                <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl ">
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-gray-100">
                   Ace Your Interviews with Our AI-Powered Interview Bot
                 </h1>
-                <p className="mt-4 text-lg text-gray-600 ">
+                <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
                   Our intelligent interview bot helps you prepare for your next job interview by providing personalized
                   feedback and practice sessions.
                 </p>
                 <div className="mt-6">
                   <Link
-                    className="inline-flex items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 "
-                    href="/auth/login"
+                    className="inline-flex items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-200 dark:focus:ring-gray-600 dark:focus:ring-offset-gray-950"
+                    href="#"
                   >
                     Get Started
                   </Link>
@@ -50,7 +50,7 @@ export default function LandingPage() {
                   alt="Interview Bot"
                   className="mx-auto"
                   height={400}
-                  src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aW50ZXJ2aWV3fGVufDB8fDB8fHww"
+                  src="/placeholder.svg"
                   style={{
                     aspectRatio: "600/400",
                     objectFit: "cover",
@@ -61,43 +61,43 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-        <section className="bg-white py-12 sm:py-16 lg:py-20 ">
+        <section className="bg-white py-12 sm:py-16 lg:py-20 dark:bg-gray-950">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl ">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-gray-100">
                 Features of Our Interview Bot
               </h2>
-              <p className="mt-4 text-lg text-gray-600 ">
+              <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
                 Our interview bot offers a range of features to help you ace your next interview.
               </p>
             </div>
             <div className="mt-10 grid grid-cols-1 gap-y-8 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8">
-              <div className="rounded-lg bg-gray-50 p-6 shadow-sm ">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-white">
+              <div className="rounded-lg bg-gray-50 p-6 shadow-sm dark:bg-gray-800">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-gray-50 dark:text-gray-900">
                   <FileQuestionIcon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-6 text-lg font-medium text-gray-900 ">
+                <h3 className="mt-6 text-lg font-medium text-gray-900 dark:text-gray-100">
                   Practice Interview Questions
                 </h3>
-                <p className="mt-2 text-base text-gray-600 ">
+                <p className="mt-2 text-base text-gray-600 dark:text-gray-400">
                   Our bot provides a wide range of practice interview questions to help you prepare.
                 </p>
               </div>
-              <div className="rounded-lg bg-gray-50 p-6 shadow-sm ">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-white">
+              <div className="rounded-lg bg-gray-50 p-6 shadow-sm dark:bg-gray-800">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-gray-50 dark:text-gray-900">
                   <ReplyIcon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-6 text-lg font-medium text-gray-900 ">Personalized Feedback</h3>
-                <p className="mt-2 text-base text-gray-600 ">
+                <h3 className="mt-6 text-lg font-medium text-gray-900 dark:text-gray-100">Personalized Feedback</h3>
+                <p className="mt-2 text-base text-gray-600 dark:text-gray-400">
                   Our AI-powered bot provides personalized feedback on your responses to help you improve.
                 </p>
               </div>
-              <div className="rounded-lg bg-gray-50 p-6 shadow-sm ">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-white ">
+              <div className="rounded-lg bg-gray-50 p-6 shadow-sm dark:bg-gray-800">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-white dark:bg-gray-50 dark:text-gray-900">
                   <CalendarIcon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-6 text-lg font-medium text-gray-900 ">Scheduling and Reminders</h3>
-                <p className="mt-2 text-base text-gray-600 ">
+                <h3 className="mt-6 text-lg font-medium text-gray-900 dark:text-gray-100">Scheduling and Reminders</h3>
+                <p className="mt-2 text-base text-gray-600 dark:text-gray-400">
                   Our bot helps you schedule practice sessions and sends reminders to keep you on track.
                 </p>
               </div>
@@ -105,12 +105,12 @@ export default function LandingPage() {
           </div>
         </section>
       </main>
-      <footer className="bg-gray-900 py-6 ">
+      <footer className="bg-gray-900 py-6 dark:bg-gray-950">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0">
             <div className="flex items-center">
               <BotIcon className="h-6 w-6 mr-2 text-white" />
-              <span className="text-white font-bold">HireWise</span>
+              <span className="text-white font-bold">Interview Bot</span>
             </div>
             <div className="text-gray-400 text-sm">© 2024 Interview Bot. All rights reserved.</div>
             <div className="flex items-center space-x-4">
