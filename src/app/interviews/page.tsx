@@ -61,16 +61,19 @@ export default function Interviews() {
                     {!interviews ? <>Soory NoInteviews</> :
 
                         interviews.map(interview => (
-                            <div className="flex" key={interview.id}>
+                            <div className="flex w-screen" key={interview.id}>
                                 <div  >
-                                    <div className="rounded-lg bg-white p-4 shadow-sm block">
-                                        <div className="flex items-center justify-between">
+                                    <div className="rounded-lg bg-white p-4 shadow-sm block w-screen">
+                                        <div className="flex items-center justify-between w-2/3">
                                             <h2 className="text-lg font-medium md:text-xl">{interview.role}</h2>
-                                            <p className="text-sm text-gray-500 dark:text-gray-400">
+                                            <p className="flex flex-col text-sm text-gray-500 dark:text-gray-400 space-y-3">
                                                 Created by {interview.user.username} on April 29, 2024
-                                                <br />
+                                               
+                                                <p className="flex">
+
                                                 <Link href={`/interviews/${interview.id}`} className="px-2 py-1 rounded bg-black text-white">View</Link>
                                                 <Link href={`/attend-interview/${interview.id}`} className="px-2 py-1 ml-2 rounded border border-black text-black">Attend</Link>
+                                                </p>
                                             </p>
                                         </div>
                                     </div>

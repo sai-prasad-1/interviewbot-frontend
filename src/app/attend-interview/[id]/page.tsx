@@ -28,7 +28,7 @@ export default function Page({ params }: { params: { id: number } }) {
 
         // Add the first question to chats
         const initialQuestion: Chat = {
-          message: response.data.questions[0].question,
+          message: response.data.questions[currentQuestionIndex].question,
           type: "question"
         };
         setChats([initialQuestion]); // Modified: Set initial question in chats
@@ -53,6 +53,11 @@ export default function Page({ params }: { params: { id: number } }) {
 
       if (currentQuestionIndex < questions.length - 1) {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
+        const initialQuestion: Chat = {
+          message: questions[currentQuestionIndex].question,
+          type: "question"
+        };
+        setChats([...chats, initialQuestion]);
       } else {
         router.push('/home');
       }
@@ -86,7 +91,6 @@ export default function Page({ params }: { params: { id: number } }) {
               </div>
             </div>
           ))}
-
         </div>
       </div>
       <div className="border-t bg-gray-100 px-4 py-3 ">
