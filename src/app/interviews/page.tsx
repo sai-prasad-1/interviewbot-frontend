@@ -23,6 +23,7 @@ interface Interview {
     level: string;
     user: User;
     questions: Question[];
+    createdAt: string;
 }
 
 type InterviewsData = Interview[];
@@ -69,7 +70,7 @@ export default function Interviews() {
                                         <div className="flex items-center justify-between w-2/3">
                                             <h2 className="text-lg font-medium md:text-xl">{interview.role}</h2>
                                             <p className="flex flex-col text-sm text-gray-500 dark:text-gray-400 space-y-3">
-                                                Created by {interview.user.username} on April 29, 2024
+                                                Created by {interview.user.username} on {interview.createdAt?? new Date().toLocaleDateString()}
                                                
                                                 <p className="flex">
 
