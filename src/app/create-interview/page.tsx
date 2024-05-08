@@ -44,8 +44,7 @@ export default function CreateInterview() {
       // If interview creation is successful, perform any necessary action
       // For example, you can redirect the user to another page
     } catch (error :any) {
-      setError(error.response?.data?.message || 'Failed to create interview. Please try again.');
-      console.log(error);
+      router.push('/interviews');
     } finally {
       setLoading(false);
     }
