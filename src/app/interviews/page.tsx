@@ -56,7 +56,9 @@ export default function Interviews() {
             {loading ? (
                 <p>Loading interviews...</p>
             ) : (
+<>
 
+<Link href={"/create-interview"} className="px-3 py-2 bg-blue-400">Create Interview</Link>
                 <div className="grid gap-4 md:gap-6">
                     {!interviews ? <>Soory NoInteviews</> :
 
@@ -82,6 +84,7 @@ export default function Interviews() {
                         ))
                     }
                 </div>
+                </>
             )}
         </main>
     );
